@@ -7,6 +7,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.os.IBinder
+import android.os.StrictMode
 import android.util.Log
 import android.widget.RemoteViews
 import com.android.c19widget.data.GetDataService
@@ -20,6 +21,11 @@ class C19WidgetProvider : AppWidgetProvider() {
         appWidgetIds: IntArray?
     ) {
         super.onUpdate(context, appWidgetManager, appWidgetIds)
+        val policy =
+            StrictMode.ThreadPolicy.Builder().permitAll().build()
+
+        StrictMode.setThreadPolicy(policy)
+
         show("Updating")
         Intent(context, UpdateService::class.java).also { context?.startService(it) }
     }
