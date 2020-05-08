@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/background_appwidget"
     android:gravity="center">
 
@@ -60,7 +61,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:fontFamily="sans-serif-medium"
-            android:text="3,526"
+            tools:text="3,526"
+            android:text="@string/placeholder"
             android:textSize="34sp"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -72,7 +74,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/linLayout"
         android:layout_alignEnd="@id/linLayout"
-        android:text="170 deaths"
+        android:text="@string/placeholder"
+        tools:text="100 deaths"
         android:layout_marginBottom="5dp"
         android:textAllCaps="false"
         android:textSize="12sp"
