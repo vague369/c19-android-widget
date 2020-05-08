@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">C19 Widget</string>
-    <string name="widget_super">covid19 nigeria</string>
-    <string name="widget_title">Total Confirmed Cases</string>
+    <string name="widget_super">covid-19</string>
+    <string name="widget_title">Total Number of Cases</string>
 </resources>
