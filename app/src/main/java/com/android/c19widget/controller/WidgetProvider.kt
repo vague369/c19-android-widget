@@ -21,6 +21,5 @@ class WidgetProvider : AppWidgetProvider() {
 
     @Suppress("MemberVisibilityCanBePrivate")
     fun doUpdate(context: Context?, repository: Repository, view: View) {
-
     }
 }
