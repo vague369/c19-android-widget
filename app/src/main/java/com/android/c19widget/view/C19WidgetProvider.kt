@@ -1,4 +1,4 @@
-package com.android.c19widget
+package com.android.c19widget.view
 
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider

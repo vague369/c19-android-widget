@@ -1,4 +1,4 @@
-package com.android.c19widget.data
+package com.android.c19widget.model
 
 class AppRepository : Repository {
 
