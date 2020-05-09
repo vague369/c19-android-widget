@@ -19,7 +19,7 @@ class C19WidgetProvider : AppWidgetProvider() {
 
     companion object {
         fun show(s: String) {
-            Log.e(Constants.LOG_TAG, s)
+            Log.d(Constants.LOG_TAG, s)
         }
     }
 }
