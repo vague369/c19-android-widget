@@ -20,6 +20,7 @@ class WidgetProvider : AppWidgetProvider() {
         appWidgetIds: IntArray?
     ) {
         super.onUpdate(context, appWidgetManager, appWidgetIds)
+        AppLogger.log("Update Called by Android")
         doUpdate(context, AppRepository(), WidgetView())
     }
 
@@ -44,6 +45,6 @@ class WidgetProvider : AppWidgetProvider() {
             }
         }
 
-        return if (hasFailed) ListenableWorker.Result.failure() else ListenableWorker.Result.success()
+        return if (hasFailed) ListenableWorker.Result.retry() else ListenableWorker.Result.success()
     }
 }

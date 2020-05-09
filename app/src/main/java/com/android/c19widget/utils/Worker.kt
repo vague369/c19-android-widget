@@ -10,6 +10,7 @@ import com.android.c19widget.view.WidgetView
 class Worker(private val context: Context, workerParameters: WorkerParameters) :
     Worker(context, workerParameters) {
     override fun doWork(): Result {
+        AppLogger.log("Worker working")
         return WidgetProvider().doUpdate(context, AppRepository(), WidgetView())
     }
 }
