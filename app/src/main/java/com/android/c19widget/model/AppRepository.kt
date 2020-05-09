@@ -2,7 +2,7 @@ package com.android.c19widget.model
 
 class AppRepository : Repository {
 
-    override fun getData(): List<Covid9jaApiResponse>? {
-        return null
+    override fun getData(): Pair<String?, String?> {
+        return Pair(null, null)
     }
 }
