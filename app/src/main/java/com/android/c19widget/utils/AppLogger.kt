@@ -6,4 +6,8 @@ object AppLogger {
     fun log(s: String) {
         Log.d(Constants.LOG_TAG, s)
     }
+
+    fun cry(s: String) {
+        Log.e(Constants.LOG_TAG, s)
+    }
 }
