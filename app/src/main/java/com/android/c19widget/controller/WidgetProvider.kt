@@ -25,15 +25,17 @@ class WidgetProvider : AppWidgetProvider() {
     @Suppress("MemberVisibilityCanBePrivate")
     fun doUpdate(context: Context?, repository: Repository, view: View) {
         context ?: return
+        AppLogger.log("WidgetProvider trying to do update")
         repository.getData {
             when (it) {
                 is Success -> {
+                    AppLogger.log("Data came in alright")
                     val noc = it.data.first
                     val nod = it.data.second
                     if (noc.isNotEmpty() && nod.isNotEmpty()) view.update(context, noc, nod)
                 }
                 is Failure -> {
-                    AppLogger.cry("Failure to get data from repository")
+                    AppLogger.cry(it.err)
                 }
             }
         }
