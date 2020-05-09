@@ -14,11 +14,11 @@ class WidgetProvider : AppWidgetProvider() {
         appWidgetIds: IntArray?
     ) {
         super.onUpdate(context, appWidgetManager, appWidgetIds)
-        doUpdate(AppRepository())
+        doUpdate(context, AppRepository())
     }
 
     @Suppress("MemberVisibilityCanBePrivate")
-    fun doUpdate(repository: Repository) {
+    fun doUpdate(context: Context?, repository: Repository) {
 
     }
 }

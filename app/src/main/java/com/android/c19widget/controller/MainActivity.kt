@@ -15,6 +15,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun doUpdate() {
-        WidgetProvider().doUpdate(AppRepository())
+        WidgetProvider().doUpdate(this, AppRepository())
     }
 }
