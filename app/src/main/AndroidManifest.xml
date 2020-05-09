@@ -17,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".view.C19WidgetProvider">
+        <receiver android:name=".controller.WidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -25,7 +25,7 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/info_appwidget" />
         </receiver>
-        <service android:name=".view.C19WidgetProvider$UpdateService" />
+        <service android:name=".controller.WidgetProvider$UpdateService" />
     </application>
 
 </manifest>
