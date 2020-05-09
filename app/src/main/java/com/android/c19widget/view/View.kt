@@ -1,6 +1,8 @@
 package com.android.c19widget.view
 
+import android.content.Context
+
 interface View {
 
-    fun update(noc: String, nod: String)
+    fun update(context: Context, noc: String, nod: String)
 }
