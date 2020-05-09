@@ -27,7 +27,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
 }
 
 dependencies {
@@ -35,6 +37,12 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation "com.google.android.material:material:1.2.0-alpha06"
+
+    // WorkManager
+    implementation "androidx.work:work-runtime-ktx:2.3.4"
+    // optional - GCMNetworkManager support
+    implementation "androidx.work:work-gcm:2.3.4"
+
     implementation 'androidx.core:core-ktx:1.0.2'
     implementation 'com.squareup.retrofit2:retrofit:2.8.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
