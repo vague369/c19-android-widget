@@ -5,6 +5,8 @@ import android.appwidget.AppWidgetProvider
 import android.content.Context
 import com.android.c19widget.model.AppRepository
 import com.android.c19widget.model.Repository
+import com.android.c19widget.view.View
+import com.android.c19widget.view.WidgetView
 
 
 class WidgetProvider : AppWidgetProvider() {
@@ -14,11 +16,11 @@ class WidgetProvider : AppWidgetProvider() {
         appWidgetIds: IntArray?
     ) {
         super.onUpdate(context, appWidgetManager, appWidgetIds)
-        doUpdate(context, AppRepository())
+        doUpdate(context, AppRepository(), WidgetView())
     }
 
     @Suppress("MemberVisibilityCanBePrivate")
-    fun doUpdate(context: Context?, repository: Repository) {
+    fun doUpdate(context: Context?, repository: Repository, view: View) {
 
     }
 }
